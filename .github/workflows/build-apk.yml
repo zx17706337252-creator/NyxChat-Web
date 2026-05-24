@@ -15,7 +15,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
           
       - name: Install dependencies
         run: npm install
@@ -38,14 +37,11 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
         
-      - name: Install Capacitor
+      - name: Install Capacitor and build APK
         run: |
           npm install @capacitor/core @capacitor/android @capacitor/cli
-          npx cap init NyxChat com.nyxchat.app --webDir dist
-          
-      - name: Add Android platform and build
-        run: |
-          npx cap add android
+          npx cap init NyxChat com.nyxchat.app --webDir dist 2>/dev/null || true
+          npx cap add android 2>/dev/null || true
           npx cap sync
           cd android
           ./gradlew assembleDebug
