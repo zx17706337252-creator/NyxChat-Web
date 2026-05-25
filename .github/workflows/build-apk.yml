@@ -33,6 +33,7 @@ jobs:
         
       - name: Init Capacitor and add Android
         run: |
+          npm install @capacitor/android
           npx cap init --web-dir dist NyxChat com.nyxchat.app
           npx cap add android
           npx cap sync android
