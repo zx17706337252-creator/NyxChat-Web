@@ -1,29 +1,30 @@
 
-import { useState } from 'react'
+export default function CharactersPage(){
+return(
+<div className="page">
+<h1>角色</h1>
 
-export default function CharactersPage() {
-  const [name, setName] = useState('')
-  const [personality, setPersonality] = useState('')
+<div className="card">
+<input placeholder="角色名"/>
+<input placeholder="年龄"/>
+<input placeholder="身高"/>
+<input placeholder="体重"/>
+<input placeholder="国籍"/>
+<input placeholder="职业"/>
 
-  return (
-    <div className="page">
-      <h1>角色管理</h1>
+<textarea placeholder="外貌描述"/>
+<textarea placeholder="关系"/>
+<textarea placeholder="喜好"/>
+<textarea placeholder="厌恶"/>
+<textarea placeholder="秘密"/>
+<textarea placeholder="Few-shot 对话示例"/>
 
-      <div className="card">
-        <input
-          placeholder="角色名字"
-          value={name}
-          onChange={(e)=>setName(e.target.value)}
-        />
+<input type="file"/>
 
-        <textarea
-          placeholder="角色人格"
-          value={personality}
-          onChange={(e)=>setPersonality(e.target.value)}
-        />
+<div>◉ 12条记忆</div>
 
-        <button>创建角色</button>
-      </div>
-    </div>
-  )
+<button>保存角色</button>
+</div>
+</div>
+)
 }

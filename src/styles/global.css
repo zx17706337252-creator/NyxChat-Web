@@ -2,40 +2,59 @@
 body{
 margin:0;
 background:linear-gradient(180deg,#0f0c29,#302b63,#24243e);
-color:white;
 font-family:sans-serif;
-min-height:100vh;
+color:white;
+}
+
+.layout{
+padding-bottom:80px;
 }
 
 .page{
-padding:24px;
+padding:20px;
 }
 
 .card{
 background:rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
-padding:20px;
 border-radius:20px;
-margin-bottom:16px;
+padding:18px;
+margin-bottom:18px;
 border:1px solid rgba(255,255,255,0.08);
 }
 
-input, textarea{
+input,textarea{
 width:100%;
 padding:12px;
-border-radius:12px;
+margin-top:10px;
 border:none;
-margin-top:8px;
+border-radius:12px;
 background:rgba(255,255,255,0.08);
 color:white;
 }
 
 button{
+margin-top:12px;
 padding:12px 18px;
 border:none;
 border-radius:12px;
 background:#7c3aed;
 color:white;
-margin-top:12px;
-cursor:pointer;
+}
+
+.bottom-nav{
+position:fixed;
+left:0;
+right:0;
+bottom:0;
+height:64px;
+display:flex;
+justify-content:space-around;
+align-items:center;
+background:#141420;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.bottom-nav a{
+color:white;
+text-decoration:none;
 }
